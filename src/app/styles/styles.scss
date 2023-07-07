@@ -21,6 +21,10 @@
         gap: 30px;
     }
 
+    &__icons {
+        object-fit: contain;
+    }
+
     &__list{
         display: flex;
         align-items: center;
@@ -42,11 +46,6 @@
 
 
 }
-
-.icons {
-    object-fit: contain;
-}
-
 
 .main {
     display: flex;
