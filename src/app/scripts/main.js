@@ -6,11 +6,14 @@ const companyArrowUp = document.querySelector('.header__companyarrowup')
 const menuFeature = document.querySelector('.menu__features')
 const featureArrow = document.querySelector('.header__featuresarrow')
 const featureArrowUp = document.querySelector('.header__featuresarrowup')
+const iconMenu = document.querySelector('.header__iconmenu')
+const iconClose = document.querySelector('.header__close')
+const menuMobile = document.querySelector('.header__mobile')
 
 const toggleMenu = (menu, arrow, arrowUp) => {
     menu.classList.toggle('show');
-    arrow.classList.toggle('hidden');
-    arrowUp.classList.toggle('hidden');
+    arrow.classList.toggle('show');
+    arrowUp.classList.toggle('show');
   };
   
   const showMenuFeature = () => {
@@ -34,5 +37,18 @@ const toggleMenu = (menu, arrow, arrowUp) => {
   companyArrow.addEventListener('click', showMenuCompany);
   companyArrowUp.addEventListener('click', hideMenuCompany);
 
+
+
+  const showMenuMobile = () => {
+    menuMobile.classList.remove('header__mobile');
+  };
+
+  const hideMenuMobile = () => {
+    menuMobile.classList.add('header__mobile')
+  };
+
+
+  iconMenu.addEventListener('click',showMenuMobile)
+  iconClose.addEventListener('click', hideMenuMobile)
 
 
