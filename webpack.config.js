@@ -25,18 +25,12 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "[name].[ext]",
-              outputPath: "images",
-            },
-          },
-        ],
-      },
-      {
-        test: /\.html$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "assets/[name][ext]",
+        }
+}
+             test: /\.html$/i,
         use: [
           {
             loader: "html-loader",
