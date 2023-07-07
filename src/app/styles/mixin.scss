@@ -1,0 +1,13 @@
+@import 'variables';
+
+@mixin buttons__properties ($border-radius, $border) {
+    width: 100px;
+    height: 45px;
+    cursor: pointer;
+    background-color: $color-white;
+    border-radius: $border-radius;
+    border: $border;
+    display: flex;
+    justify-content: center;
+}
+
